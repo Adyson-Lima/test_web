@@ -1,8 +1,17 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+// import App from './App';
+import Cars from './pages/Cars';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+
+test('renderiza Name', () => {
+  render(<Cars />);
+  const tableElement = screen.getByText('Name');
+  expect(tableElement).toBeInTheDocument();
+});
+
+test('renderiza Description', () => {
+  render(<Cars />);
+  const tableElement = screen.getByText('Description');
+  expect(tableElement).toBeInTheDocument();
 });
